@@ -1,3 +1,26 @@
+:root{
+  --color-primary: #57C278;
+  --color-primary-50: #D9F7E9;
+  --color-secondary: #82CFFA;
+  --color-secondary-50: #E8F8FF;
+  --color-tertiary: #A6D157;
+  --color-tertiary-50: #F0F8E2;
+  --color-quaternary: #E06B69;
+  --color-quaternary-50: #FDE7E6;
+  --color-quinary: #DB6EBF;
+  --color-quinary-50: #FAE5F5;
+  --color-senary: #FFBA05;
+  --color-senary-50: #FFF5D9;
+  --color-septenary: #FF8A29;
+  --color-septenary-50: #FFEEDF;
+
+  --paleta-100: #E6DEFA;
+  --paleta-200: #8C92FA;
+  --paleta-300: #CE8CFA;
+  --paleta-400: #A98CFA;
+  --paleta-500: #8CB5FA;
+  --paleta-600: #F18CFA;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
