@@ -4,6 +4,7 @@ import { useState } from 'react'
 const CampoTxt = (props) => {
     const placeholderFormatado= `${props.placeholder}...`
     const [ valor, setValor ] = useState('')
+    
     const aoDigitado = (evento) => {
         props.aoAlterado(evento.target.value)
     }

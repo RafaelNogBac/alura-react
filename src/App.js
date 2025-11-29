@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Banner from './componentes/Banner/Banner';
 import Times from './componentes/Time/index';
@@ -18,6 +17,7 @@ function App() {
   ]
 
   const[colaboradores, setColaboradores] = useState([])
+  
   const aoNovoColaboradorAdicionado = (colaborador) => {
       setColaboradores([...colaboradores, colaborador])
   }
@@ -26,7 +26,15 @@ function App() {
     <div className="App">
       <Banner/>
       <Formulario nomeTimes={times.map(time=> time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-      {times.map(time => <Times key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)}
+      {times.map(time =>
+         <Times 
+         key={time.nome} 
+         nome={time.nome} 
+         corPrimaria={time.corPrimaria} 
+         corSecundaria={time.corSecundaria}
+         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+         />
+        )}
     </div>
   );
 }

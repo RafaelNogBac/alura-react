@@ -10,6 +10,7 @@ const Formulario = (props) => {
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
 
     const aoSalvar = (evento) =>{
         evento.preventDefault()
@@ -17,9 +18,9 @@ const Formulario = (props) => {
              nome,
             cargo,
             imagem,
-            times
+            time
         })
-        console.log('Form foi submetido => Formulario.js') 
+        console.log('Form foi submetido => ', nome, cargo, imagem, time) 
     }
     
     return (
@@ -29,7 +30,7 @@ const Formulario = (props) => {
                 <CampoTexto valor={nome} aoAlterado={valor => setNome(valor)} label="Nome" obrigatorio="true" placeholder="Digite seu nome"/>
                 <CampoTexto valor={cargo} aoAlterado={valor => setCargo(valor)} label="Cargo" obrigatorio="true" placeholder="Digite seu cargo"/>
                 <CampoTexto valor={imagem} aoAlterado={valor => setImagem(valor)} label="Imagem" placeholder="Informe o endereço da imagem"/>
-                <ListaSuspensa label="Time" itens={times}/>
+                <ListaSuspensa label="Time" itens={times} aoAlterado={valor => setTime(valor)}/>
                 <Botao texto="Criar Card"/>
             </form>
         </section>
